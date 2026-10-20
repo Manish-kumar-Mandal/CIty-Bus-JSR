@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | City Bus JSR</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-card {
+            width: 380px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+        }
+
+        .bus-logo {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
+        }
+
+        h2 {
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            margin: 12px auto;
+            width: 220px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logout {
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="profile-card">
+
+        
+
+        {% if profile.profile_image %}
+        <img src="{{ profile.profile_image.url }}" class="profile-img">
+        {% else %}
+        <img src="{% static 'images/user.png' %}" class="profile-img">
+        {% endif %}
+
+        <h2>{{ request.user.first_name }}</h2>
+
+        <p><b>Username:</b> {{ request.user.username }}</p>
+
+        <p><b>Email:</b> {{ request.user.email }}</p>
+
+        <p><b>Phone:</b> {{ profile.phone }}</p>
+
+        <a href="{% url 'edit_profile' %}" class="btn">Edit Profile</a>
+
+        <a href="{% url 'logout' %}" class="btn logout">Logout</a>
+        <a href="{% url 'home' %}" style="text-decoration:none;font-size:20px;">⬅️ Back to Home</a>
+
+    </div>
+
+</body>
+
+</html>

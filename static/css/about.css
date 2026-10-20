@@ -1,0 +1,746 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f7f9fc;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    padding: 18px 25px;
+    background: #001c44;
+    backdrop-filter: blur(8px);
+}
+
+/* Logo */
+.bus {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.bus img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.bus span {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+
+h6 {
+    position: absolute;
+    color: white;
+    left: 77px;
+    top: 44px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li {
+    font-family: "Baloo Bhai 2", sans-serif;
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    margin-left: 20vw;
+}
+
+li a:hover {
+    color: yellow;
+}
+
+a.ll {
+    color: yellow;
+}
+.clock {
+    position: absolute;
+    right: 180px;
+}
+
+#live-clock {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+
+.user {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+.account h3{
+    
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    position: absolute;
+    top: 16px;
+    right: 60px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+
+/* heading */
+.heading {
+    background-color: #0d233a;
+    color: #ffffff;
+    padding: 40px;
+}
+
+.head-left {
+    float: left;
+    width: 50%;
+    padding-top: 20px;
+}
+
+.head-left p {
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.yellow-tag {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffbc00;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.heading h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+    margin: 5px 0;
+}
+
+.head-subtext {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 20px;
+    color: #ffbc00;
+    margin: 5px 0 5px;
+    font-weight: normal;
+}
+
+.explore-btn {
+    background-color: #ffbc00;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.head-right {
+    float: right;
+    width: 45%;
+}
+
+.head-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.heading::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* --- Container --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* main */
+.intro-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 2px solid rgb(202, 192, 192);
+}
+
+.intro-left {
+    float: left;
+    width: 55%;
+}
+
+.section-mini {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #0051ff;
+    font-size: 18px;
+    padding-left: 80px;
+    font-weight: bold;
+}
+
+.section-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
+    color: #00152e;
+    margin: 5px 0 15px;
+}
+
+.intro-section p {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.dark-btn {
+    background-color: #00152e;
+    color: #ffffff;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dark-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.intro-right {
+    float: right;
+    width: 40%;
+}
+
+.intro-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.intro-section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* cards */
+.card-row {
+    background-color: #00152e;
+    margin-bottom: 30px;
+}
+
+.cardd-card {
+    float: left;
+    width: 23%;
+    background-color: #00152e;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid rgb(112, 106, 106);
+    padding: 20px 10px;
+    border-radius: 6px;
+    margin-right: 2%;
+    box-sizing: border-box;
+    transition: 1.2s;
+}
+
+.cardd-card:hover {
+    transform: scale(1.1);
+}
+
+.cardd-card:last-child {
+    margin-right: 0;
+}
+
+.card-icon {
+    font-size: 26px;
+    color: #ffbc00;
+    margin-bottom: 5px;
+}
+
+.cardd-card h2 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+.cardd-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.card-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #ffbc00;
+    margin: 10px auto 0;
+}
+
+.card-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* mision vision */
+.mv-row {
+    margin-bottom: 40px;
+}
+
+.mv-box {
+    float: left;
+    width: 48%;
+    background-color: #ffffff;
+    border: 2px solid rgb(202, 192, 192);
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 4%;
+    box-sizing: border-box;
+    transition: 1.2s;
+}
+
+.mv-box:hover {
+    transform: scale(1.1);
+}
+
+.mv-box:last-child {
+    margin-right: 0;
+}
+
+.mv-icon-circle {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #00152e;
+    color: #ffbc00;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.mv-text {
+    margin-left: 65px;
+}
+
+.mv-text h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #00152e;
+}
+
+.mv-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.mv-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* WHY CHOOSE US */
+.choose-us-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.choose-us-section h3 {
+    color: #00152e;
+    margin-bottom: 20px;
+}
+
+.features-strip {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 0;
+}
+
+.feature-item {
+    float: left;
+    width: 20%;
+}
+
+.feature-item i {
+    font-size: 24px;
+    color: #00152e;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-family: "Baloo Bhai 2", sans-serif;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.border-left {
+    border-left: 1px solid #e2e8f0;
+}
+
+.features-strip::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* cta */
+.last-banner {
+    background-color: #00152e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.last-left-icon {
+    float: left;
+    width: 8%;
+    font-size: 28px;
+    color: #ffbc00;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.last-middle-text {
+    float: left;
+    width: 62%;
+}
+
+.last-middle-text h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 0 5px;
+}
+
+.last-middle-text p {
+    font-family: "Baloo Bhai 2", sans-serif;
+    margin: 0;
+    color: #cbd5e0;
+    font-size: 13px;
+}
+
+.last-right-btn {
+    float: right;
+    width: 25%;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.last-btn {
+    background-color: #ffbc00;
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.last-banner::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* footer */
+.mega-footer {
+    background-color: #000f21;
+    color: #ffffff;
+    padding-top: 40px;
+    margin-top: 50px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    float: left;
+    box-sizing: border-box;
+    padding-right: 15px;
+}
+
+.col-35 {
+    width: 35%;
+}
+
+.col-20 {
+    width: 20%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.mega-footer h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-sub {
+    font-size: 11px;
+    color: #a0aec0;
+    margin: 2px 0 15px;
+}
+
+.footer-desc {
+    font-size: 13px;
+    color: #a0aec0;
+    line-height: 1.5;
+}
+
+.footer-socials i {
+    font-size: 16px;
+    margin-right: 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.mega-footer h5 {
+    color: #ffbc00;
+    font-size: 14px;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.contact-row {
+    font-size: 13px;
+    color: #a0aec0;
+    margin: 0 0 12px;
+}
+
+.contact-row i {
+    color: #ffbc00;
+    margin-right: 8px;
+}
+
+.footer-base {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #718096;
+    border-top: 1px solid #001937;
+    margin-top: 30px;
+}
+
+.footer-inner::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (ADDED FOR ALL MOBILE & TABLET VIEWS)
+   ========================================================================== */
+
+/* Laptop & Large Tablets Viewport Breakpoint */
+@media (max-width: 1024px) {
+    .nav {
+        margin-left: 5vw;
+    }
+
+    .container {
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .cardd-card {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 20px;
+    }
+
+    .cardd-card:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+/* Medium Tablets & iPads Viewport Breakpoint */
+@media (max-width: 900px) {
+    .head-left, .head-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .head-right {
+        margin-top: 25px;
+    }
+
+    .intro-left, .intro-right {
+        float: none;
+        width: 100%;
+    }
+
+    .section-mini {
+        padding-left: 0;
+        text-align: center;
+        display: block;
+    }
+
+    .intro-right {
+        margin-top: 25px;
+    }
+
+    .mv-box {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .mv-box:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Smart Phones Viewports Breakpoint */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .nav {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .user, .login li {
+        position: static;
+        display: inline-block;
+        margin: 5px auto 0 auto;
+    }
+
+    .heading h2 {
+        font-size: 32px;
+    }
+
+    .head-subtext {
+        font-size: 18px;
+    }
+
+    .cardd-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .feature-item {
+        float: none;
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+
+    .border-left {
+        border-left: none;
+    }
+
+    .last-left-icon, .last-middle-text, .last-right-btn {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .last-right-btn {
+        margin-bottom: 0;
+    }
+
+    .footer-column {
+        float: none;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .footer-socials i {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Schedule Bus</title>
+
+    <link rel="stylesheet" href="{% static 'css/schedule.css' %}">
+    <!-- Latest Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="bus">
+            <img src="{% static 'Images/bus.svg' %}" alt="bus">
+            <span> City Bus JSR</span>
+            <div>
+                <h6> Your Journey, Our Responsibility</h6>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+
+                <li><a href="{% url 'book' %}">BOOK TICKET</a></li>
+
+                <li><a href="{% url 'schedule' %}" class="ll">SCHEDULE</a></li>
+
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="live-clock"></span>
+        </div>
+
+
+        <a href="{% url 'profile' %}">
+            <img class="user" src="{% static 'images/user.png' %}" alt="User">
+            <div class="account">
+
+                <h3>ACCOUNT</h3>
+            </div>
+        </a>
+
+    </nav>
+    <!-- heading  -->
+    <div class="heading">
+        <div class="head-text">
+            <span class="yellow-tag">/ BUS SCHEDULE</span>
+            <h2>Bus <span>Schedule</span></h2>
+            <p>Check today's bus timings and plan your journey</p>
+        </div>
+        <div class="heading-line">
+
+        </div>
+    </div>
+    <main class="mainn">
+        <div class="main-container">
+
+            <div class="search">
+                <table width="100%" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td width="30%">
+                            <label class="form-label">From</label><br>
+                            <select class="form-input">
+                                <option>Select From</option>
+                                <option>Mango</option>
+                                <option>Bistupur</option>
+                            </select>
+                        </td>
+                        <td width="30%">
+                            <label class="form-label">To</label><br>
+                            <select class="form-input">
+                                <option>Select To</option>
+                                <option>Sakchi</option>
+                                <option>Adityapur</option>
+                            </select>
+                        </td>
+                        <td width="20%">
+                            <label class="form-label">Date</label><br>
+                            <input type="date" class="form-input">
+                        </td>
+                        <td width="20%">
+                            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search
+                                Buses</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section-title">
+                <div class="title-left">
+                    <h3><i class="fa-regular fa-calendar-days text-blue"></i> Today's Bus Schedule</h3>
+                </div>
+                <div class="heading-linee">
+
+                </div>
+
+                <div class="title-right">
+                    Sort By:
+                    <select class="sort-dropdown">
+                        <option>Departure Time</option>
+                    </select>
+                </div>
+            </div>
+            <!-- card 1 -->
+            <div class="bus-card">
+                <table width="100%" cellpadding="15" cellspacing="0">
+                    <tr>
+                        <td width="-20%">
+                            <img src="{% static 'images/bus1.jpeg' %}" class="bus-imgg" alt="Bus 1">
+                        </td>
+                        <td width="25%">
+                            <h4 class="bus-name">JSR Express</h4>
+                            <p class="bus-route">Sakchi &rarr; Dimna</p>
+                            <small class="bus-type"><i class="fa-solid fa-couch"></i> Non AC Seater</small>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Departure</span><br>
+                            <strong class="time"><i class="fa-regular fa-clock text-yellow"></i> 08:00 AM
+                            </strong>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Arrival</span><br>
+                            <strong class="time-text"><i class="fa-regular fa-clock text-yellow"></i> 08:45 AM</strong>
+                        </td>
+                        <td width="10%">
+                            <span class="label-heading">Duration</span><br>
+                            <span class="duration"><i class="fa-solid fa-stopwatch text-yellow"></i> 45m</span>
+                        </td>
+                        <td width="15%" align="right">
+
+                            <span class="status-badge status-ontime">On Time</span><br>
+                            <span class="fare">Fare</span><br>
+                            <strong class="price">&#8377;20</strong>
+                        </td>
+                        <td width="15%" align="center">
+
+                            <a href="{% url 'book' %}" class="route-btn">
+                                <i class="fa-solid fa-route"></i>
+                                View Route
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- card 2 -->
+            <div class="bus-card">
+                <table width="100%" cellpadding="15" cellspacing="0">
+                    <tr>
+                        <td width="-20%">
+                            <img src="{% static 'images/bus2.jpeg' %}" class="bus-imgg" alt="Bus 2">
+                        </td>
+                        <td width="25%">
+                            <h4 class="bus-name">JSR Express</h4>
+                            <p class="bus-route">Sakchi &rarr; Dimna</p>
+                            <small class="bus-type"><i class="fa-solid fa-couch"></i> Non AC Seater</small>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Departure</span><br>
+                            <strong class="time"><i class="fa-regular fa-clock text-yellow"></i> 08:00 AM
+                            </strong>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Arrival</span><br>
+                            <strong class="time-text"><i class="fa-regular fa-clock text-yellow"></i> 08:45 AM</strong>
+                        </td>
+                        <td width="10%">
+                            <span class="label-heading">Duration</span><br>
+                            <span class="duration"><i class="fa-solid fa-stopwatch text-yellow"></i> 45m</span>
+                        </td>
+                        <td width="15%" align="right">
+
+                            <span class="status-badge status-ontime">On Time</span><br>
+                            <span class="fare">Fare</span><br>
+                            <strong class="price">&#8377;20</strong>
+                        </td>
+                        <td width="15%" align="center">
+
+                            <a href="{% url 'book' %}" class="route-btn">
+                                <i class="fa-solid fa-route"></i>
+                                View Route
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- card 3 -->
+            <div class="bus-card">
+                <table width="100%" cellpadding="15" cellspacing="0">
+                    <tr>
+                        <td width="-20%">
+                            <img src="{% static 'images/bus3.jpeg' %}" class="bus-imgg" alt="Bus 3">
+                        </td>
+                        <td width="25%">
+                            <h4 class="bus-name">JSR Express</h4>
+                            <p class="bus-route">Sakchi &rarr; Dimna</p>
+                            <small class="bus-type"><i class="fa-solid fa-couch"></i> Non AC Seater</small>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Departure</span><br>
+                            <strong class="time"><i class="fa-regular fa-clock text-yellow"></i> 08:00 AM
+                            </strong>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Arrival</span><br>
+                            <strong class="time-text"><i class="fa-regular fa-clock text-yellow"></i> 08:45 AM</strong>
+                        </td>
+                        <td width="10%">
+                            <span class="label-heading">Duration</span><br>
+                            <span class="duration"><i class="fa-solid fa-stopwatch text-yellow"></i> 45m</span>
+                        </td>
+                        <td width="15%" align="right">
+
+                            <span class="status-badge status-ontime">On Time</span><br>
+                            <span class="fare">Fare</span><br>
+                            <strong class="price">&#8377;20</strong>
+                        </td>
+                        <td width="15%" align="center">
+
+                            <a href="{% url 'book' %}" class="route-btn">
+                                <i class="fa-solid fa-route"></i>
+                                View Route
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- card 4 -->
+            <div class="bus-card">
+                <table width="100%" cellpadding="15" cellspacing="0">
+                    <tr>
+                        <td width="-20%">
+                            <img src="{% static 'images/bus4.jpeg' %}" class="bus-imgg" alt="Bus 4">
+                        </td>
+                        <td width="25%">
+                            <h4 class="bus-name">JSR Express</h4>
+                            <p class="bus-route">Sakchi &rarr; Dimna</p>
+                            <small class="bus-type"><i class="fa-solid fa-couch"></i> Non AC Seater</small>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Departure</span><br>
+                            <strong class="time"><i class="fa-regular fa-clock text-yellow"></i> 08:00 AM
+                            </strong>
+                        </td>
+                        <td width="15%">
+                            <span class="label-heading">Arrival</span><br>
+                            <strong class="time-text"><i class="fa-regular fa-clock text-yellow"></i> 08:45 AM</strong>
+                        </td>
+                        <td width="10%">
+                            <span class="label-heading">Duration</span><br>
+                            <span class="duration"><i class="fa-solid fa-stopwatch text-yellow"></i> 45m</span>
+                        </td>
+                        <td width="15%" align="right">
+
+                            <span class="status-badge status-ontime">On Time</span><br>
+                            <span class="fare">Fare</span><br>
+                            <strong class="price">&#8377;20</strong>
+                        </td>
+                        <td width="15%" align="center">
+
+                            <a href="{% url 'book' %}" class="route-btn">
+                                <i class="fa-solid fa-route"></i>
+                                View Route
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="note-box">
+                <table width="100%" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td width="5%" valign="top" align="center">
+                            <i class="fa-solid fa-circle-info note-icon"></i>
+                        </td>
+                        <td>
+                            <strong>Note</strong>
+                            <p>Timings may change due to traffic and weather conditions. Please reach the bus stop at
+                                least 10 minutes before departure.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="main-footer">
+            <div class="footerr">
+                <table width="100%" cellpadding="20" cellspacing="0">
+                    <tr>
+                        <td width="35%" valign="top">
+                            <h4 class="footer-logo"> <i class="fa-solid fa-bus text-yellow"></i> City Bus
+                                <span>JSR</span>
+                            </h4>
+                            <p class="footer-subtext">BUS TERMINAL</p>
+                            <p class="footer-desc">Your trusted travel partner for safe, comfortable and affordable
+                                journeys.</p>
+                            <div class="footer-socials">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                        </td>
+                        <td width="20%" valign="top">
+                            <h5>Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'book' %}">Book Ticket</a></li>
+                                <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            </ul>
+                        </td>
+                        <td width="20%" valign="top">
+                            <h5>Information</h5>
+                            <ul class="footer-links">
+                                <li><a href="#">Cancellation Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Help Center</a></li>
+                            </ul>
+                        </td>
+                        <td width="25%" valign="top">
+                            <h5>Contact Us</h5>
+                            <p class="contact-info-line"><i class="fa-solid fa-phone"></i> 1800 123 4567</p>
+                            <p class="contact-info-line"><i class="fa-solid fa-envelope"></i>
+                                support@citybusjsr.com sattyabanbari437@gmail.com
+                            </p>
+                            <p class="contact-info-line"><i class="fa-solid fa-location-dot"></i> Sakchi, Jamshedpur,
+                                Jharkhand - 831001</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 City Bus JSR. All rights reserved.
+            </div>
+        </div>
+
+    </main>
+    <script src="{% static 'js/index.js' %}"></script
+</body>
+
+</html>

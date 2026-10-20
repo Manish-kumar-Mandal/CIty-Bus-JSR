@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Verify OTP</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+      <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
+</head>
+
+<body class="login-body">
+
+    <div class="login-wrapper-container">
+
+        <!-- ==========================
+             LEFT BRANDING PANEL
+        =========================== -->
+
+        <div class="login-branding-panel">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-bus text-yellow"></i>
+
+                <strong>
+                    CITY BUS
+                    <span class="text-yellow">JSR</span>
+                </strong>
+
+                <div class="brand-sub">
+                    JAMSHEDPUR
+                </div>
+
+            </div>
+
+
+            <div class="welcome-message">
+
+                <h2>
+                    Account
+                    <span class="text-yellow">Recovery</span>
+                </h2>
+
+                <p>
+                    Follow the quick secure steps to verify your identity
+                    and restore access to your profile.
+                </p>
+
+            </div>
+
+
+            <div class="bus-display">
+
+               <img src="{% static 'images/login.jpg' %}" class="login-bus-img" alt="City Bus JSR">
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================
+             RIGHT OTP PANEL
+        =========================== -->
+
+        <div class="login-form-panel">
+
+            <div class="login-card flow-card">
+
+                <div class="card-header">
+
+                    <div class="avatar-circle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h2>Verify OTP</h2>
+
+                    <div class="title-underline"></div>
+
+                    <p class="subtitle-text">
+                        We have sent a 6-digit verification code to your email.
+                    </p>
+
+                </div>
+
+
+                <!-- OTP Form -->
+
+                <form method="POST" action="reset.html" target="_blank">
+
+                    <div class="form-item">
+
+                        <label>Enter OTP</label>
+
+                        <div class="otp-inputs-row">
+
+                            <input
+                                type="text"
+                                name="otp1"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                            <input
+                                type="text"
+                                name="otp2"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                            <input
+                                type="text"
+                                name="otp3"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                            <input
+                                type="text"
+                                name="otp4"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                            <input
+                                type="text"
+                                name="otp5"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                            <input
+                                type="text"
+                                name="otp6"
+                                maxlength="1"
+                                class="otp-box"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Resend -->
+
+                    <div class="resend-container">
+
+                        <p>
+
+                            Didn't receive the OTP?
+
+                            <a
+                                href="#"
+                                class="text-yellow"
+                                style="text-decoration:none;">
+
+                                Resend OTP
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Verify Button -->
+
+                    <button
+                        type="submit"
+                        class="login-submit-btn">
+
+                        Verify OTP
+
+                        &nbsp;&nbsp;
+
+                        &rarr;
+
+                    </button>
+
+                </form>
+
+
+                <!-- Back -->
+
+                <p class="signup-footer-text">
+
+                    <a href="login.html" class="back-link">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Login
+
+                    </a>
+
+                </p>
+
+
+                <!-- Stepper -->
+
+                <div class="flow-stepper">
+
+                    <div class="step-node">
+
+                        <span class="node-number">
+                            &#10004;
+                        </span>
+
+                        Enter Email
+
+                    </div>
+
+                    <div class="step-node node-active">
+
+                        <span class="node-number">
+                            2
+                        </span>
+
+                        Verify OTP
+
+                    </div>
+
+                    <div class="step-node">
+
+                        <span class="node-number">
+                            3
+                        </span>
+
+                        Reset Password
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+   <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+/* ==========================================================================
+   1. GLOBAL RESET & CORE CONFIGURATIONS
+   ========================================================================== */
+
+.login-body {
+    background-color: #020b18;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.text-yellow {
+    color: #ffbc00;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   2. CUSTOM JAVASCRIPT ALERT MESSAGE SYSTEM
+   ========================================================================== */
+
+.alert-box {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background-color: #7f1d1d;
+    color: #fca5a5;
+    border: 1px solid #b91c1c;
+    border-radius: 8px;
+    padding: 14px 45px 14px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden Alert */
+
+.alert-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.alert-close-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #fca5a5;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.alert-close-btn:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE MAIN CONTAINER (FLEX ENGINE)
+   ========================================================================== */
+
+.login-wrapper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: calc(100vh - 60px);
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   4. LEFT SIDE: BRANDING & DISPLAY DETAILS
+   ========================================================================== */
+
+.login-branding-panel {
+    flex: 1;
+    width: 50%;
+}
+
+.brand-logo {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.brand-sub {
+    font-size: 10px;
+    color: #a0aec0;
+    letter-spacing: 1.5px;
+    padding-left: 26px;
+    margin-top: 2px;
+}
+
+.welcome-message h2 {
+    font-size: 40px;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.welcome-message p {
+    color: #a0aec0;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 30px;
+}
+
+.login-bus-img {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Feature Row */
+
+.login-features {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.feature-badge {
+    flex: 1;
+}
+
+.feature-badge i {
+    font-size: 22px;
+    color: #ffbc00;
+    margin-bottom: 8px;
+}
+
+.feature-badge p {
+    margin: 0;
+    font-size: 11px;
+    color: #cbd5e0;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================================
+   5. RIGHT SIDE: LOGIN CARD
+   ========================================================================== */
+
+.login-form-panel {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-card {
+    background-color: #051329;
+    border: 1px solid #102547;
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 460px;
+    box-sizing: border-box;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffbc00;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 24px;
+    color: #ffbc00;
+    box-sizing: border-box;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.title-underline {
+    width: 45px;
+    height: 3px;
+    background-color: #ffbc00;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.subtitle-text {
+    font-size: 13px;
+    color: #a0aec0;
+    margin: 15px 0 0;
+}
+
+
+/* Form */
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    font-size: 13px;
+    color: #cbd5e0;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.field-icon {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #ffbc00;
+    font-size: 14px;
+}
+
+.toggle-pwd-icon {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    color: #a0aec0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 13px 40px;
+    background-color: #030d1a;
+    border: 1px solid #1a2e4c;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+    border-color: #ffbc00;
+}
+
+
+/* Remember */
+
+.form-actions-row {
+    margin: 15px 0 25px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-me-box input {
+    vertical-align: middle;
+    margin-right: 5px;
+    accent-color: #ffbc00;
+}
+
+.remember-me-box label {
+    color: #cbd5e0;
+    cursor: pointer;
+}
+
+.forgot-pwd-box a {
+    color: #ffbc00;
+    text-decoration: none;
+}
+
+
+/* Login Button */
+
+.login-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffbc00;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-submit-btn:hover {
+    background-color: #e0a500;
+}
+
+
+/* Divider */
+
+.divider-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #1a2e4c;
+}
+
+.divider-label {
+    font-size: 12px;
+    color: #718096;
+    margin: 0 15px;
+}
+
+
+/* Google Button */
+
+.google-login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #1a2e4c;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.google-login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.google-icon {
+    color: #de4b39;
+    margin-right: 8px;
+}
+
+
+/* Signup */
+
+.signup-footer-text {
+    text-align: center;
+    margin: 30px 0 0;
+    font-size: 14px;
+    color: #cbd5e0;
+}
+
+.signup-footer-text a {
+    color: #ffbc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.signup-footer-home {
+    text-align: center;
+    margin: 30px 0 0;
+    font-size: 14px;
+    color: #cbd5e0;
+}
+
+.signup-footer-home a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+
+.page-footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: #718096;
+    border-top: 1px solid #08162b;
+    padding: 20px 0;
+    background-color: #020b18;
+}
+/* ==========================================================================
+   OTP VERIFICATION BOX GRID STYLES
+   ========================================================================== */
+
+/* OTP Input Row */
+
+.otp-inputs-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+
+/* Individual OTP Boxes */
+
+.otp-box {
+    width: 14%;
+    padding: 12px 0;
+    background-color: #030d1a;
+    border: 1px solid #1a2e4c;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+
+/* Focus State */
+
+.otp-box:focus {
+    border-color: #ffbc00;
+}
+
+
+/* ==========================================================================
+   RESEND OTP SECTION
+   ========================================================================== */
+
+.resend-container {
+    text-align: center;
+    font-size: 13px;
+    color: #a0aec0;
+    margin: 10px 0 25px;
+}
+
+.resend-container a {
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.resend-container a:hover {
+    color: #e0a500;
+}
+
+
+/* ==========================================================================
+   7. RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .login-wrapper-container {
+        flex-direction: column;
+        gap: 35px;
+        padding: 30px 20px;
+    }
+
+    .login-branding-panel,
+    .login-form-panel {
+        width: 100%;
+    }
+
+    .login-form-panel {
+        justify-content: center;
+    }
+
+    .welcome-message h2 {
+        font-size: 32px;
+    }
+
+    .login-features {
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+
+    .feature-badge {
+        width: 50%;
+        flex: none;
+    }
+}

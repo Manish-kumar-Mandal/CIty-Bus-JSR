@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="bus">
+            <img src="{% static 'Images/bus.svg' %}" alt="bus">
+            <span> City Bus JSR</span>
+            <div>
+                <h6> Your Journey, Our Responsibility</h6>
+            </div>
+        </div>
+        <div class="nav">
+       <ul>
+    <li><a href="{% url 'home' %}" class="ll">HOME</a></li>
+
+    <li><a href="{% url 'book' %}">BOOK TICKET</a></li>
+
+    <li><a href="{% url 'schedule' %}">SCHEDULE</a></li>
+
+    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+
+    <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+</ul>
+        </div>
+        <div class="clock">
+            <span id="live-clock"></span>
+        </div>
+        <a href="{% url 'profile' %}">
+            <img class="user" src="{% static 'images/user.png' %}" alt="User">
+              <div class="account">
+
+                    <h3>ACCOUNT</h3>
+                </div>
+        </a>
+
+
+    </nav>
+    <div class="content">
+        <div class="hh-content">
+            <h1><strong> Welcome to, </strong><br>
+                Jamshedpur Bus Terminal
+            </h1>
+            <p>
+                connecting Mango, Sakchi, Bistupur,
+                Adityapur and outside cities and states.
+                with reliable bus services for a
+                comfortable journey.
+            </p>
+            <div class="buttons">
+                <a href="bookticket.html" class="btn1"> Book Ticket</a>
+                <a href="#" class="btn2"> View Shedule </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="features-card-strip">
+
+        <div class="feature-item-card">
+            <div class="card-icon-box">
+                <i class="fa-solid fa-bus-simple"></i>
+            </div>
+            <div class="card-info-content">
+                <h4>Many Routes</h4>
+                <p>Multiple routes across the city</p>
+            </div>
+        </div>
+
+        <div class="feature-item-card">
+            <div class="card-icon-box">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+            <div class="card-info-content">
+                <h4>On Time</h4>
+                <p>Punctual buses for your convenience</p>
+            </div>
+        </div>
+
+        <div class="feature-item-card">
+            <div class="card-icon-box">
+                <i class="fa-solid fa-couch"></i>
+            </div>
+            <div class="card-info-content">
+                <h4>Comfortable Seats</h4>
+                <p>Clean and comfortable seating</p>
+            </div>
+        </div>
+
+        <div class="feature-item-card">
+            <div class="card-icon-box">
+                <i class="fa-solid fa-shield"></i>
+            </div>
+            <div class="card-info-content">
+                <h4>Safe Journey</h4>
+                <p>Your safety is our top priority</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="main-footer">
+        <div class="footerr">
+            <table width="100%" cellpadding="20" cellspacing="0">
+                <tr>
+                    <td width="35%" valign="top">
+                        <h4 class="footer-logo"> <i class="fa-solid fa-bus text-yellow"></i> City Bus <span>JSR</span>
+                        </h4>
+                        <p class="footer-subtext">BUS TERMINAL</p>
+                        <p class="footer-desc">Your trusted travel partner for safe, comfortable and affordable
+                            journeys.</p>
+                        <div class="footer-socials">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </td>
+                    <td width="20%" valign="top">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="project.html">Home</a></li>
+                            <li><a href="bookticket.html">Book Ticket</a></li>
+                            <li><a href="schedule.html">Schedule</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </td>
+                    <td width="20%" valign="top">
+                        <h5>Information</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Cancellation Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </td>
+                    <td width="25%" valign="top">
+                        <h5>Contact Us</h5>
+                        <p class="contact-info-line"><i class="fa-solid fa-phone"></i> 1800 123 4567</p>
+                        <p class="contact-info-line"><i class="fa-solid fa-envelope"></i>
+                            support@citybusjsr.com sattyabanbari437@gmail.com
+                        </p>
+                        <p class="contact-info-line"><i class="fa-solid fa-location-dot"></i> Sakchi, Jamshedpur,
+                            Jharkhand - 831001</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 City Bus JSR. All rights reserved.
+        </div>
+    </div>
+
+<script src="{% static 'js/index.js' %}"></script
+
+</body>
+
+
+</html>

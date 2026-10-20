@@ -1,0 +1,366 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Register</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
+</head>
+
+<body class="login-body">
+
+    <!-- ===========================
+            Custom Alert
+    ============================ -->
+
+    <div id="custom-alert" class="alert-box alert-hidden">
+
+        <span id="alert-text">
+            Please fill in all fields.
+        </span>
+
+        <button type="button" class="alert-close-btn" onclick="closeAlert()">
+            &times;
+        </button>
+
+    </div>
+
+
+    <!-- ===========================
+            Main Wrapper
+    ============================ -->
+
+    <div class="login-wrapper-container">
+
+
+        <!-- Left Branding Panel -->
+
+        <div class="login-branding-panel">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-bus text-yellow"></i>
+
+                <strong>
+                    CITY BUS
+                    <span class="text-yellow">JSR</span>
+                </strong>
+
+                <div class="brand-sub">
+                    JAMSHEDPUR
+                </div>
+
+            </div>
+
+
+            <div class="welcome-message">
+
+                <h2>
+                    Create Your
+                    <span class="text-yellow">Account!</span>
+                </h2>
+
+                <p>
+                    Join City Bus JSR today and enjoy quick ticket booking,
+                    easy schedule tracking, and a comfortable travel experience.
+                </p>
+
+            </div>
+
+
+            <div class="bus-display">
+
+                <img src="{% static 'images/login.jpg' %}" class="login-bus-img" alt="City Bus JSR">
+
+            </div>
+
+
+            <div class="login-features">
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-bus"></i>
+                    <p>
+                        Safe & Reliable
+                        <br>
+                        Travel
+                    </p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <p>
+                        On-Time
+                        <br>
+                        Service
+                    </p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-couch"></i>
+                    <p>
+                        Comfortable
+                        <br>
+                        Seats
+                    </p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>
+                        Secure
+                        <br>
+                        Journey
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Register Panel -->
+
+        <div class="login-form-panel">
+
+            <div class="login-card">
+
+                <div class="card-header">
+
+                    <div class="avatar-circle">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <h2>Register</h2>
+
+                    <div class="title-underline"></div>
+
+                    <p class="subtitle-text">
+                        Fill in the details below to create your account
+                    </p>
+
+                </div>
+
+
+                <!-- Register Form -->
+
+                <form id="registerForm" method="POST" action="">
+                    {% csrf_token %}
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-item">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-user field-icon"></i>
+
+                            <input type="text" id="fullName" name="full_name" class="auth-input"
+                                placeholder="Enter your full name">
+
+                        </div>
+
+                    </div>
+                    <div class="form-item">
+
+                        <label for="username">
+                            Username
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user field-icon"></i>
+
+                            <input type="text" id="username" name="username" class="auth-input"
+                                placeholder="Enter username">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-item">
+
+                        <label for="emailAddress">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope field-icon"></i>
+
+                            <input type="email" id="emailAddress" name="email" class="auth-input"
+                                placeholder="Enter your email address">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="form-item">
+
+                        <label for="phoneNumber">
+                            Phone Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone field-icon"></i>
+
+                            <input type="text" id="phoneNumber" name="phone" class="auth-input"
+                                placeholder="Enter your phone number">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-item">
+
+                        <label for="passwordField">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock field-icon"></i>
+
+                            <input type="password" id="passwordField" name="password" class="auth-input"
+                                placeholder="Enter your password">
+
+                            <i class="fa-regular fa-eye-slash toggle-pwd-icon" id="togglePassword">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-item">
+
+                        <label for="confirmPasswordField">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock field-icon"></i>
+
+                            <input type="password" id="confirmPasswordField" name="confirm_password" class="auth-input"
+                                placeholder="Confirm your password">
+
+                            <i class="fa-regular fa-eye-slash toggle-pwd-icon" id="toggleConfirmPassword">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="form-actions-row">
+
+                        <div class="remember-me-box">
+
+                            <input type="checkbox" id="terms" name="terms_accepted" required>
+
+                            <label for="terms">
+                                I agree to the
+                                <a href="#" class="text-yellow">
+                                    Terms &amp; Conditions
+                                </a>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Register Button -->
+
+                    <button type="submit" class="login-submit-btn">
+
+                        Create Account
+
+                        &nbsp;&nbsp;
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+
+                <div class="divider-strip">
+
+                    <span class="divider-line"></span>
+
+                    <span class="divider-label">
+                        OR
+                    </span>
+
+                    <span class="divider-line"></span>
+
+                </div>
+
+
+                <!-- Google Signup -->
+
+                <button class="google-login-btn" id="googleSignUpBtn">
+
+                    <i class="fa-brands fa-google google-icon"></i>
+
+                    Sign up with Google
+
+                </button>
+
+
+                <!-- Login Link -->
+
+                <p class="signup-footer-text">
+
+                    Already have an account?
+
+               <a href="{% url 'login' %}">Login</a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="page-footer-note">
+        &copy; 2025 City Bus JSR. All Rights Reserved.
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Book ticket</title>
+
+    <link rel="stylesheet" href="{% static 'css/bookticket.css' %}">
+    <!-- Latest Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="bus">
+            <img src="{% static 'Images/bus.svg' %}" alt="bus">
+            <span> City Bus JSR</span>
+            <div>
+                <h6> Your Journey, Our Responsibility</h6>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+
+                <li><a href="{% url 'book' %}" class="ll">BOOK TICKET</a></li>
+
+                <li><a href="{% url 'schedule' %}">SCHEDULE</a></li>
+
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="live-clock"></span>
+        </div>
+
+        <a href="{% url 'profile' %}">
+            <img class="user" src="{% static 'images/user.png' %}" alt="User">
+            <div class="account">
+
+                <h3>ACCOUNT</h3>
+            </div>
+        </a>
+
+
+
+    </nav>
+
+
+
+    <div class="heading">
+        <div class="O">
+            <h1> Book Your Ticket</h1>
+            <div class="heading-line">
+
+            </div>
+        </div>
+        <div class="www">
+            Fill in Your details and book your seat <br>
+            for a comfortable journey.
+        </div>
+
+
+    </div>
+
+
+
+    <main>
+
+        <section class="main-form">
+            <div class="headd">
+                <img src="{% static 'images/MAPP.svg' %}" alt="Map" class="map-icon">
+                <span>Trip Details</span>
+            </div>
+            <form class="booking-form">
+
+                <div class="row">
+
+                    <div class="vvv">
+                        <label>From </label>
+                        <div class="input">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <select>
+
+                                <option>Mango</option>
+                                <option>Sakchi</option>
+                                <option>Bistupur</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <button type="button" class="swap-btn"><i class="fa-regular fa-arrows-rotate"></i></button> -->
+                    <div class="vvv">
+                        <label>To </label>
+                        <div class="input">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <select>
+                                <option>Kadma</option>
+                                <option>Dimna</option>
+                                <option>Adityapur</option>
+                                <option>Telco</option>
+                            </select>
+
+
+
+                        </div>
+                    </div>
+                    <div class="vvv">
+                        <label>Journey Date</label>
+                        <div class="input">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="vvv">
+                        <label>Return Date(Optional)</label>
+                        <div class="input">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input type="date" value="1000-10-20">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sec-row">
+
+                    <div class="vvv">
+                        <label>Bus Type</label>
+                        <div class="input">
+                            <i class="fa-solid fa-bus"></i>
+                            <select>
+                                <option>General</option>
+                                <option>AC Seater</option>
+                                <option>NON AC Seater</option>
+                                <option>AC Sleeper</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="vvv">
+                        <label>Available Bus</label>
+                        <div class="input">
+                            <i class="fa-solid fa-bus"></i>
+                            <select>
+                                <option>JSR EXPRESS</option>
+                                <option>STEEL CITY EXPRESS</option>
+                                <option>TATA NAGAR CONNECT</option>
+                                <option>SUBARNAREKHA TRAVELS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="vvv">
+                        <label> Passengers</label>
+                        <div class="input">
+                            <i class="fa-solid fa-users"></i>
+                            <input type="number" min="1" placeholder="Enter Passengers">
+                        </div>
+                    </div>
+                    <div class="vvv">
+                        <a href="{% url 'schedule' %}" class="search-btn">
+                            Search Buses
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="features">
+            <div class="feature-item">
+                <div class="feature-icon icon-1"><i class="fa-solid fa-shield"></i></div>
+                <div>
+                    <h4>Safe & Secure</h4>
+                    <p>Your safety is<br> our priority</p>
+                </div>
+            </div>
+            <div class="feature-divide"></div>
+            <div class="feature-item">
+                <div class="feature-icon icon-2"><i class="fa-solid fa-couch"></i></div>
+                <div>
+                    <h4>Comfortable Seats</h4>
+                    <p>Relax and enjoy <br> your journey</p>
+                </div>
+            </div>
+            </div>
+            <div class="feature-divide"></div>
+            <div class="feature-item ">
+                <div class="feature-icon icon-3"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div>
+                    <h4>Best Prices</h4>
+                    <p>Affordable fares <br> everyday</p>
+                </div>
+            </div>
+            <div class="feature-divide"></div>
+            <div class="feature-item">
+                <div class="feature-icon icon-4"><i class="fa-regular fa-clock"></i></div>
+                <div>
+                    <h4>On Time</h4>
+                    <p>Punctuality is <br>our promise</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="Available-bus">
+            <div class="title">
+                <h3><i class="fa-solid fa-bus "></i> Available Buses</h3>
+                <p>Mango -> Sakchi | 25 May 2025</p>
+            </div>
+            <div class="sort">
+                <span>Sort by:</span>
+                <select class="sort-select">
+                    <option>Departure Time</option>
+                    <option>Price</option>
+                    <option>Rating</option>
+                </select>
+            </div>
+        </section>
+        <section class="bus-listings">
+
+            <!-- bus-1 -->
+            <div class="bus-card">
+                <div class="bus-img">
+                    <img src="{% static 'images/bus1.jpeg' %}" alt="Bus 1">
+                </div>
+                <div class="bus-info">
+                    <div class="bus-name">
+                        <h4>JSR Express</h4>
+                        <span class="badge badge-green">General</span>
+                    </div>
+                    <div class="bus-rating">
+                        <i class="fa-solid fa-star text-yellow"></i> 4.0 <span class="review">(120)</span>
+                    </div>
+                </div>
+                <div class="bus-time text-left">
+                    <h4>08:00 AM</h4>
+                    <p>Sakchi</p>
+                    <p class="station">Bus Stand</p>
+                </div>
+                <div class="bus-duration">
+                    <p>45m</p>
+                    <div class="duration-line">
+                        <span class="dot"></span>
+                        <i class="fa-solid fa-bus"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <p class="route">Direct</p>
+                </div>
+                <div class="bus-time text-right">
+                    <h4>08:45 AM</h4>
+                    <p>Dimna</p>
+                    <p class="station">Dimna Stand</p>
+                </div>
+                <div class="bus-price">
+                    <h4>₹ 10</h4>
+                    <p class="per-seat">per seat</p>
+                    <p class="seats-left">Seats Left: <span>12</span></p>
+                </div>
+                <div class="bus-view">
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+            <!-- bus-2 -->
+            <div class="bus-card">
+                <div class="bus-img">
+                    <img src="{% static 'images/bus2.jpeg' %}" alt="Bus 2">
+                </div>
+                <div class="bus-info">
+                    <div class="bus-name">
+                        <h4> STEEL CITY Express</h4>
+                        <span class="badge badge-blue"> AC Seater</span>
+                    </div>
+                    <div class="bus-rating">
+                        <i class="fa-solid fa-star text-yellow"></i> 4.4 <span class="review">( 85)</span>
+                    </div>
+                </div>
+                <div class="bus-time text-left">
+                    <h4>09:30 AM</h4>
+                    <p>Sakchi</p>
+                    <p class="station">Bus Stand</p>
+                </div>
+                <div class="bus-duration">
+                    <p>45m</p>
+                    <div class="duration-line">
+                        <span class="dot"></span>
+                        <i class="fa-solid fa-bus"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <p class="route">Direct</p>
+                </div>
+                <div class="bus-time text-right">
+                    <h4>10:15 AM</h4>
+                    <p>Dimna</p>
+                    <p class="station">Dimna Stand</p>
+                </div>
+                <div class="bus-price">
+                    <h4>₹ 25</h4>
+                    <p class="per-seat">per seat</p>
+                    <p class="seats-left">Seats Left: <span>18</span></p>
+                </div>
+                <div class="bus-view">
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+            <!-- bus-3 -->
+            <div class="bus-card">
+                <div class="bus-img">
+                    <img src="{% static 'images/bus3.jpeg' %}" alt="Bus 3">
+                </div>
+                <div class="bus-info">
+                    <div class="bus-name">
+                        <h4>Tata Nagar Connect</h4>
+                        <span class="badge badge-green">Non AC Seater</span>
+                    </div>
+                    <div class="bus-rating">
+                        <i class="fa-solid fa-star text-yellow"></i> 4.5 <span class="review">(60)</span>
+                    </div>
+                </div>
+                <div class="bus-time text-left">
+                    <h4>08:00 AM</h4>
+                    <p>Sakchi</p>
+                    <p class="station">Bus Stand</p>
+                </div>
+                <div class="bus-duration">
+                    <p>45m</p>
+                    <div class="duration-line">
+                        <span class="dot"></span>
+                        <i class="fa-solid fa-bus"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <p class="route">Direct</p>
+                </div>
+                <div class="bus-time text-right">
+                    <h4>08:45 AM</h4>
+                    <p>Dimna</p>
+                    <p class="station">Dimna Stand</p>
+                </div>
+                <div class="bus-price">
+                    <h4>₹ 15</h4>
+                    <p class="per-seat">per seat</p>
+                    <p class="seats-left">Seats Left: <span>16</span></p>
+                </div>
+                <div class="bus-view">
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+            <!-- bus-4 -->
+            <div class="bus-card">
+                <div class="bus-img">
+                    <img src="{% static 'images/bus4.jpeg' %}" alt="Bus 4">
+                </div>
+                <div class="bus-info">
+                    <div class="bus-name">
+                        <h4>Subarnarekha Travels</h4>
+                        <span class="badge badge-purple">AC Sleaper</span>
+                    </div>
+                    <div class="bus-rating">
+                        <i class="fa-solid fa-star text-yellow"></i> 4.7 <span class="review">(50)</span>
+                    </div>
+                </div>
+                <div class="bus-time text-left">
+                    <h4>08:00 AM</h4>
+                    <p>Sakchi</p>
+                    <p class="station">Bus Stand</p>
+                </div>
+                <div class="bus-duration">
+                    <p>45m</p>
+                    <div class="duration-line">
+                        <span class="dot"></span>
+                        <i class="fa-solid fa-bus"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <p class="route">Direct</p>
+                </div>
+                <div class="bus-time text-right">
+                    <h4>08:45 AM</h4>
+                    <p>Dimna</p>
+                    <p class="station">Dimna Stand</p>
+                </div>
+                <div class="bus-price">
+                    <h4>₹ 30</h4>
+                    <p class="per-seat">per seat</p>
+                    <p class="seats-left">Seats Left: <span>25</span></p>
+                </div>
+                <div class="bus-view">
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+            <!-- last  -->
+            <section class="trust-bar">
+                <div class="trust-item">
+                    <i class="fa-solid fa-headset trust-icon1"></i>
+                    <div>
+                        <h5>24/7 Customer Support</h5>
+                        <p>We are here to help you</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-location-dot trust-icon2"></i>
+                    <div>
+                        <h5>Live Tracking</h5>
+                        <p>Track your bus live </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="trust-item ">
+                    <i class="fa-solid fa-award trust-icon3"></i>
+                    <div>
+                        <h5>Trusted by Thousands </h5>
+                        <p>More than 10k happy customers</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <i class="fa-regular fa-square-check trust-icon4"></i>
+                    <div>
+                        <h5>Secure Payments</h5>
+                        <p>100% safe and secure </p>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 City Bus JSR. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+
+</html>

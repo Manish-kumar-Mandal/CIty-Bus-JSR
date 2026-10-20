@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Reset Password</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
+</head>
+
+<body class="login-body">
+
+    <div class="login-wrapper-container">
+
+        <!-- ==========================
+             LEFT BRANDING PANEL
+        =========================== -->
+
+        <div class="login-branding-panel">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-bus text-yellow"></i>
+
+                <strong>
+                    CITY BUS
+                    <span class="text-yellow">JSR</span>
+                </strong>
+
+                <div class="brand-sub">
+                    JAMSHEDPUR
+                </div>
+
+            </div>
+
+
+            <div class="welcome-message">
+
+                <h2>
+                    Account
+                    <span class="text-yellow">Recovery</span>
+                </h2>
+
+                <p>
+                    Follow the quick secure steps to verify your identity
+                    and restore access to your profile.
+                </p>
+
+            </div>
+
+
+            <div class="bus-display">
+
+             <img src="{% static 'images/login.jpg' %}" class="login-bus-img" alt="City Bus JSR">
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================
+             RIGHT RESET PASSWORD PANEL
+        =========================== -->
+
+        <div class="login-form-panel">
+
+            <div class="login-card flow-card">
+
+                <div class="card-header">
+
+                    <div class="avatar-circle">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <h2>Reset Password</h2>
+
+                    <div class="title-underline"></div>
+
+                    <p class="subtitle-text">
+                        Create a strong new password for your account.
+                    </p>
+
+                </div>
+
+
+                <!-- Reset Password Form -->
+
+                <form method="POST" action="changepass.html">
+
+                    <div class="form-item">
+
+                        <label>New Password</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock field-icon"></i>
+
+                            <input
+                                type="password"
+                                name="new_password"
+                                class="auth-input"
+                                placeholder="Enter new password"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-item">
+
+                        <label>Confirm Password</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock field-icon"></i>
+
+                            <input
+                                type="password"
+                                name="confirm_password"
+                                class="auth-input"
+                                placeholder="Confirm new password"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Update Button -->
+
+                    <button
+                        type="submit"
+                        class="login-submit-btn" >
+
+                        Update Password
+
+                        &nbsp;&nbsp;
+
+                        &rarr;
+
+                    </button>
+
+                </form>
+
+
+                <!-- Back -->
+
+                <p class="signup-footer-text">
+
+                    <a href="login.html" class="back-link" >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Login
+
+                    </a>
+
+                </p>
+
+
+                <!-- Stepper -->
+
+                <div class="flow-stepper">
+
+                    <div class="step-node">
+
+                        <span class="node-number">
+                            &#10004;
+                        </span>
+
+                        Enter Email
+
+                    </div>
+
+                    <div class="step-node">
+
+                        <span class="node-number">
+                            &#10004;
+                        </span>
+
+                        Verify OTP
+
+                    </div>
+
+                    <div class="step-node node-active">
+
+                        <span class="node-number">
+                            3
+                        </span>
+
+                        Reset Password
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+   <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

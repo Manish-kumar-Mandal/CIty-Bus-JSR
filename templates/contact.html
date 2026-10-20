@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="bus">
+            <img src="{% static 'Images/bus.svg' %}" alt="bus">
+            <span> City Bus JSR</span>
+            <div>
+                <h6> Your Journey, Our Responsibility</h6>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+
+                <li><a href="{% url 'book' %}">BOOK TICKET</a></li>
+
+                <li><a href="{% url 'schedule' %}">SCHEDULE</a></li>
+
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+
+                <li><a href="{% url 'contact' %}" class="ll">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="live-clock"></span>
+        </div>
+
+        <a href="{% url 'profile' %}">
+            <img class="user" src="{% static 'images/user.png' %}" alt="User">
+            <div class="account">
+
+                <h3>ACCOUNT</h3>
+            </div>
+        </a>
+    </nav>
+    <div class="heading">
+        <div class="head-text">
+            <span class="yellow-tag"> ━ CONTACT US</span>
+            <h2>CONTACT US</h2>
+        </div>
+        <div class="heading-line">
+
+        </div>
+        <p>We're Here to Help You</p>
+    </div>
+    <main class="container">
+
+
+        <!-- Contact Cards -->
+
+        <div class="info-row">
+
+            <div class="info-card">
+
+                <div class="info-icon-circle">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="info-text">
+                    <h4>Address</h4>
+
+                    <p>
+                        City Bus Terminal<br>
+                        Sakchi, Jamshedpur<br>
+                        Jharkhand - 831001
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon-circle">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="info-text">
+
+                    <h4>Phone </h4>
+
+                    <p>
+                        <strong>+91 98765 43210</strong><br>
+                        <strong>1800 123 4567</strong><br>
+                        <span class="s-text">(Toll Free)</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon-circle">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="info-text">
+
+                    <h4>Email</h4>
+
+                    <p>
+                        support@citybusjsr.com
+                        Booking@citybusjsr.com<br>
+                        sattyabanbari437@gmail.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- contact form  -->
+
+        <div class="split-section">
+
+            <div class="section-left">
+
+                <div class="card-box">
+
+                    <h3 class="box-heading line-yellow">
+                        Send Us a Message
+                    </h3>
+
+                    <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+
+                        <div class="input-row">
+
+                            <div class="input-half">
+
+                                <!-- <i class="fa-solid fa-user input-icon"></i> -->
+
+                                <input type="text" name="name" placeholder="Full Name" class="form-input">
+
+                            </div>
+
+                            <div class="input-half float-right">
+
+                                <!-- <i class="fa-solid fa-envelope input-icon"></i> -->
+
+                                <input type="email" name="email" placeholder="Email Address" class="form-input">
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                        </div>
+
+
+                        <div class="input-full">
+
+                            <!-- <i class="fa-solid fa-phone input-icon"></i> -->
+
+                            <input type="text" name="phone" placeholder="Phone Number" class="form-input"
+                                style="margin-top: 12px;">
+
+                        </div>
+
+
+                        <div class="input-full">
+                            <!-- <i class="fa-solid fa-tags input-icon"></i> -->
+
+                            <select class="form-input select-box" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Ticket Booking Issue">Ticket Booking Issue</option>
+                                <option value="Refund Request">Refund Request</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-full">
+
+                            <!-- <i class="fa-solid fa-comment input-icon msg-icon"></i> -->
+
+                            <textarea rows="5" placeholder="Your Message" name="message" class="form-input textarea-box"
+                                required></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="submit-btn">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            &nbsp; Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+
+            <div class="section-right">
+
+                <div class="card-box plain-box">
+
+                    <h3 class="box-heading line-yellow">
+                        We'd Love to Hear from You!
+                    </h3>
+
+                    <p class="desc-para">
+                        Whether you have a question about our services, need help with booking, or just want to share
+                        feedback, our team is ready to assist you.
+                    </p>
+
+
+                    <div class="support-item">
+
+                        <div class="support-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+
+                        <div class="support-text">
+                            <strong
+                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Working
+                                Hours</strong>
+                            <p>Mon - Sun : 6:00 AM - 10:00 PM</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="support-item">
+
+                        <div class="support-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <div class="support-text">
+                            <strong>Customer Support</strong>
+                            <p>24/7 Support Available</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="support-item">
+
+                        <div class="support-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div class="support-text">
+                            <strong>Quick Response</strong>
+                            <p>We strive to reply within 24 hours</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <!-- Map -->
+
+        <div class="map-section">
+
+            <h3 class="map-heading">
+
+                <i class="fa-solid fa-location-crosshairs text-blue"></i>
+
+                Our Location
+
+            </h3>
+
+            <div class="map-frame-box">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.9828413594882!2d86.1995603745576!3d22.80309967932823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e30074caed57%3A0xd6917fb1c90d0562!2sSakchi%20bus%20stand!5e0!3m2!1sen!2sin!4v1783710342178!5m2!1sen!2sin"
+                    width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            </div>
+
+        </div>
+    </main>
+    <!-- footer  -->
+    <footer>
+
+        <div class="mega-footer">
+
+            <div class="footer-inner">
+
+                <div class="footer-column col-35">
+
+                    <h4>
+                        <i class="fa-solid fa-bus text-yellow"></i>
+                        CITY BUS
+                        <span class="text-yellow">JSR</span>
+                    </h4>
+
+                    <p class="footer-sub">
+                        Travel Smart, Travel Easy
+                    </p>
+
+                    <p class="footer-desc">
+                        City Bus JSR is dedicated to providing safe, reliable and affordable bus services across
+                        Jamshedpur.
+                    </p>
+
+                    <div class="footer-socials">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column col-20">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'book' %}">Book Ticket</a></li>
+                        <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column col-20">
+
+                    <h5>Our Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="#">City Bus Service</a></li>
+                        <li><a href="#">Online Booking</a></li>
+                        <li><a href="#">Daily Schedules</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column col-25">
+
+                    <h5>Contact Us</h5>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        City Bus Terminal, Sakchi Jamshedpur
+                    </p>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 12345 67890
+                    </p>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@citybusjsr.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-base">
+                &copy; 2025 City Bus JSR. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="{% static 'js/index.js' %}"></script
+</body>
+
+</html>

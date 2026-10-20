@@ -1,0 +1,351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - About Us</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="bus">
+            <img src="{% static 'Images/bus.svg' %}" alt="bus">
+            <span> City Bus JSR</span>
+            <div>
+                <h6> Your Journey, Our Responsibility</h6>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+
+                <li><a href="{% url 'book' %}">BOOK TICKET</a></li>
+
+                <li><a href="{% url 'schedule' %}">SCHEDULE</a></li>
+
+                <li><a href="{% url 'about' %}" class="ll">ABOUT US</a></li>
+
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="live-clock"></span>
+        </div>
+
+
+        <a href="{% url 'profile' %}">
+            <img class="user" src="{% static 'images/user.png' %}" alt="User">
+            <div class="account">
+
+                <h3>ACCOUNT</h3>
+            </div>
+        </a>
+    </nav>
+    <div class="heading">
+        <div class="head-left">
+            <span class="yellow-tag">
+                ABOUT US
+            </span>
+
+            <h2>City Bus JSR</h2>
+
+            <h3 class="head-subtext">
+                Connecting People, Connecting Jamshedpur
+            </h3>
+
+            <p>
+                Safe, reliable and affordable bus transportation across the city.
+            </p>
+
+            <a href="schedule.html" class="btn">
+                <button class="explore-btn">
+                    Explore Services &nbsp; &rarr;
+                </button>
+            </a>
+            <!-- &nbsp; &rarr; -->
+
+        </div>
+
+        <div class="head-right">
+
+            <img src="{% static 'images/about.jpeg' %}" class="head-img" alt="Main Bus">
+
+        </div>
+
+    </div>
+    <main class="container">
+
+        <!-- About Section -->
+        <div class="intro-section">
+
+            <div class="intro-left">
+
+                <span class="section-mini">
+                    ABOUT
+                </span>
+
+                <h3 class="section-heading">
+                    About City Bus JSR
+                </h3>
+
+                <p>
+                    City Bus JSR is committed to providing safe, comfortable and affordable transportation services
+                    across Jamshedpur.
+                </p>
+
+                <p>
+                    With a modern fleet of buses, professional drivers and a customer-first approach, we ensure every
+                    journey is smooth, reliable and pleasant.
+                </p>
+
+                <button class="dark-btn">
+                    <a href="#cardss">
+                        Read More &nbsp; &rarr;
+                </button>
+                </a>
+
+            </div>
+
+            <div class="intro-right">
+
+                <img src="{% static 'images/about.jpeg' %}" class="intro-img" alt="Bus Side View">
+
+            </div>
+
+        </div>
+    </main>
+    <!-- cards  -->
+    <div class="card-row" id="cardss">
+
+        <div class="cardd-card">
+            <i class="fa-solid fa-bus card-icon"></i>
+            <h2>100+</h2>
+            <p>Daily Trips</p>
+            <div class="card-underline"></div>
+        </div>
+
+        <div class="cardd-card">
+            <i class="fa-solid fa-route card-icon"></i>
+            <h2>50+</h2>
+            <p>Routes</p>
+            <div class="card-underline"></div>
+        </div>
+
+        <div class="cardd-card">
+            <i class="fa-solid fa-users card-icon"></i>
+            <h2>15K+</h2>
+            <p>Happy Passengers</p>
+            <div class="card-underline"></div>
+        </div>
+
+        <div class="cardd-card">
+            <i class="fa-regular fa-clock card-icon"></i>
+            <h2>99%</h2>
+            <p>On-Time Service</p>
+            <div class="card-underline"></div>
+        </div>
+
+    </div>
+    <!-- mision vision  -->
+    <div class="mv-row">
+
+        <div class="mv-box">
+
+            <div class="mv-icon-circle">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <div class="mv-text">
+                <h4>Our Mission</h4>
+                <p>
+                    To provide safe, comfortable and affordable transportation for everyone.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="mv-box">
+
+            <div class="mv-icon-circle">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div class="mv-text">
+                <h4>Our Vision</h4>
+                <p>
+                    To become the most trusted city transport service in Jharkhand.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- why choose us  -->
+    <div class="choose-us-section">
+
+        <h3>Why Choose City Bus JSR?</h3>
+
+        <div class="features-strip">
+
+            <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <p>Safe Journey</p>
+            </div>
+
+            <div class="feature-item border-left">
+                <i class="fa-solid fa-couch"></i>
+                <p>Comfortable Seats</p>
+            </div>
+
+            <div class="feature-item border-left">
+                <i class="fa-solid fa-user-tie"></i>
+                <p>Professional Drivers</p>
+            </div>
+
+            <div class="feature-item border-left">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <p>Affordable Fare</p>
+            </div>
+
+            <div class="feature-item border-left">
+                <i class="fa-regular fa-clock"></i>
+                <p>On-Time Service</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="last-banner">
+
+        <div class="last-left-icon">
+            <i class="fa-solid fa-ticket"></i>
+        </div>
+
+        <div class="last-middle-text">
+            <h3>Ready to Travel?</h3>
+
+            <p>
+                Book your seat now and enjoy a safe and comfortable journey with City Bus JSR.
+            </p>
+        </div>
+
+        <div class="last-right-btn">
+
+            <a href="bookticket.html" class="btn" target="_blank">
+                <button class="last-btn">
+
+                    Book Your Ticket &nbsp; &rarr;
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+    </div>
+    <!-- footer  -->
+    <footer>
+
+        <div class="mega-footer">
+
+            <div class="footer-inner">
+
+                <div class="footer-column col-35">
+
+                    <h4>
+                        <i class="fa-solid fa-bus text-yellow"></i>
+                        CITY BUS
+                        <span class="text-yellow">JSR</span>
+                    </h4>
+
+                    <p class="footer-sub">
+                        Travel Smart, Travel Easy
+                    </p>
+
+                    <p class="footer-desc">
+                        City Bus JSR is dedicated to providing safe, reliable and affordable bus services across
+                        Jamshedpur.
+                    </p>
+
+                    <div class="footer-socials">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column col-20">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'book' %}">Book Ticket</a></li>
+                        <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-column col-20">
+
+                    <h5>Our Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="#">City Bus Service</a></li>
+                        <li><a href="#">Online Booking</a></li>
+                        <li><a href="#">Daily Schedules</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column col-25">
+
+                    <h5>Contact Us</h5>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        City Bus Terminal, Sakchi Jamshedpur
+                    </p>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 12345 67890
+                    </p>
+
+                    <p class="contact-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@citybusjsr.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-base">
+                &copy; 2025 City Bus JSR. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="{% static 'js/index.js' %}"></script
+
+</body>
+
+</html>

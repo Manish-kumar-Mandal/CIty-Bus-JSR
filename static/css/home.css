@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+
+    min-height: 100vh;
+    background-image: url("../images/home.jpeg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    text-align: center;
+
+
+    padding: 18px 25px;
+    background: rgba(10, 20, 50, 0.75);
+
+
+    backdrop-filter: blur(8px);
+}
+
+/* Logo  */
+.bus {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Baloo Bhai 2", sans-serif;
+
+
+
+}
+
+.bus img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.bus span {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+
+h6 {
+    position: absolute;
+    color: white;
+    left: 77px;
+    top: 44px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+
+
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+
+
+}
+
+.navbar ul li {
+    font-family: "Baloo Bhai 2", sans-serif;
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    margin-left: 20vw;
+}
+
+li a:hover {
+    color: yellow;
+}
+
+
+a.ll {
+    color: yellow;
+}
+
+h6 {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.content {
+
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
+}
+
+.hh-content h1 strong {
+    padding-left: 120px;
+    font-weight: bolder;
+}
+
+.hh-content {
+    max-width: 500px;
+    /* margin-top: -60px; */
+}
+
+.hh-content h1 {
+    text-shadow: 10px 10px 20px black;
+    position: relative;
+    right: 40px;
+    font-size: 42px;
+
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hh-content p {
+    text-shadow: 10px 10px 30px black;
+    position: relative;
+    right: 40PX;
+
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn1 {
+    text-decoration: none;
+    background: #FFC107;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn2 {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background: #ffb300;
+
+}
+
+.btn2:hover {
+    background: white;
+    color: black;
+}
+
+.clock {
+    position: absolute;
+    right: 180px;
+}
+
+#live-clock {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+.account h3{
+    
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    position: absolute;
+    top: 16px;
+    right: 60px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+
+
+.user {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HORIZONTAL FEATURES CARD STRIP DESIGN
+   ========================================================================== */
+
+.features-card-strip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(3, 13, 27, 0.4);
+    border: 1px solid rgba(243, 236, 236, 0.267);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   FEATURE CARD
+   ========================================================================== */
+
+.feature-item-card {
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.feature-item-card:last-child {
+    border-right: none;
+}
+
+
+/* ==========================================================================
+   ICON BOX
+   ========================================================================== */
+
+.card-icon-box {
+    flex-shrink: 0;
+}
+
+.card-icon-box i {
+    font-size: 28px;
+    color: #ffbc00;
+}
+
+
+/* ==========================================================================
+   CARD CONTENT
+   ========================================================================== */
+
+.card-info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info-content h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.card-info-content p {
+    font-family: "Baloo Bhai 2", sans-serif;
+    margin: 0;
+    font-size: 12px;
+    color: #d7dadf;
+    line-height: 1.4;
+}
+
+
+
+/* FOOTER  */
+.main-footer {
+    background: #092449;
+
+
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+.footerr {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.footer-logo span {
+    color: rgb(255, 174, 0);
+
+    font-family: "Baloo Bhai 2", sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.text-yellow {
+    color: rgb(255, 174, 0);
+}
+
+.footer-subtext {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 12px;
+    color: #a0b2c6;
+    letter-spacing: 1px;
+    padding-left: 28px;
+    margin-top: -6px;
+    margin: -6px 0 10px 0;
+}
+
+.footer-desc {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.footer-socials i {
+
+    font-size: 18px;
+    margin-right: 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.footer-socials i:hover {
+    color: #ffbc00;
+}
+
+.main-footer h5 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: #ffbc00;
+    font-size: 15px;
+    margin: 0 0 15px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.contact-info-line {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0 0 12px 0;
+}
+
+.contact-info-line i {
+    color: #ffbc00;
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    font-family: "Baloo Bhai 2", sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: #919cac;
+    border-top: 1px solid #002257;
+    margin-top: 20px;
+}
+
+footer {
+    text-shadow: 10px 10px 7px black;
+    color: white;
+    position: absolute;
+    right: 520px;
+}
+
+
+/* responsive  */
+/* ==========================================================================
+   PURE RESPONSIVE OVERRIDES (APPENDED FOR ALL SCREEN SIZES)
+   ========================================================================== */
+
+/* ==========================================================================
+   MOBILE DEVICES & SMALL VIEWPORTS BREAKPOINT
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* FIX: Force the body background to lock dynamically down the layout stream */
+    body {
+        background-attachment: fixed !important;
+        background-position: -700px center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .user,
+    .login li {
+        position: static;
+        display: inline-block;
+        margin: 10px auto 0 auto;
+    }
+
+    /* Adjusted padding to look clean on compact smartphone viewports */
+    .content {
+        height: auto;
+        padding: 40px 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hh-content h1,
+    .hh-content p {
+        right: 0;
+        text-align: center;
+    }
+
+    .hh-content h1 strong {
+        padding-left: 0;
+        display: block;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    /* Clean feature list stack block adjustments */
+    .features-card-strip {
+        flex-direction: column;
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .feature-item-card {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .feature-item-card:last-child {
+        border-bottom: none;
+    }
+
+    footer {
+        position: static;
+        text-align: center;
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+}

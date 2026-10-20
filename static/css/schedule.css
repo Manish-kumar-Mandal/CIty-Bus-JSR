@@ -1,0 +1,730 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: white;
+
+}
+
+
+
+.navbar {
+    display: flex;
+    text-align: center;
+
+
+    padding: 18px 25px;
+    background: #001c44;
+    backdrop-filter: blur(8px);
+}
+
+/* Logo  */
+.bus {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Baloo Bhai 2", sans-serif;
+
+
+
+}
+
+.bus img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.bus span {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+
+h6 {
+    position: absolute;
+    color: white;
+    left: 77px;
+    top: 44px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+
+
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+
+
+}
+
+.navbar ul li {
+    font-family: "Baloo Bhai 2", sans-serif;
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    margin-left: 20vw;
+}
+
+li a:hover {
+    color: yellow;
+}
+
+
+a.ll {
+    color: yellow;
+}
+
+.clock {
+    position: absolute;
+    right: 180px;
+}
+
+#live-clock {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.user {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+.account h3{
+    
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    position: absolute;
+    top: 16px;
+    right: 60px;
+    width: 30px;
+    height: 27px;
+    color: white;
+}
+
+/* heading  */
+/* .heading {
+
+    background-image: url(shedule.jpeg);
+    height: 45vh;
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+} */
+.heading {
+
+    background-image: url("../images/schedule.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 130px 40px;
+    padding-bottom: 120px;
+    color: #ffffff;
+}
+
+
+.yellow-tag {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: #f0ec0d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.head-text h2 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: white;
+    font-size: 36px;
+    margin: 5px 0;
+}
+
+.head-text h2 span {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: yellow;
+}
+
+.head-text p {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: white;
+    margin: 5px 0 0 0;
+}
+
+.heading-line {
+    width: 90px;
+    height: 3px;
+    background: #ffc107;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+/* #e2e8f0 */
+/* main form  */
+/* --- Central Page Layout Container --- */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Search Options Widget Box --- */
+.search {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-top: -50px;
+    /* Shifts up over the banner background */
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-top: 5px;
+}
+
+.search-btn {
+    margin-top: 22px;
+    width: 100%;
+    padding: 11px;
+    background-color: #001c44;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section-title {
+    margin: 30px 0 20px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-left {
+    float: left;
+}
+
+.heading-linee {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    width: 45px;
+    height: 3px;
+    background: #ffc107;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.title-left h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #001c44;
+}
+
+.title-right {
+    float: right;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.sort-dropdown {
+    padding: 6px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.section-title::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* bus card  */
+
+.bus-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid rgb(223, 219, 219);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 15px;
+    border-left: 4px solid #ffbc00;
+    /* Yellow bar details decoration */
+}
+
+.bus-card td {
+    padding: 18px 20px;
+    vertical-align: middle;
+    border-right: 1px solid #e8e8e8;
+}
+
+.bus-card td:last-child {
+    border-right: none;
+}
+
+.bus-imgg {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* width: 90%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px; */
+
+.bus-name {
+    font-family: "Baloo Bhai 2", sans-serif;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #001c44;
+}
+
+.bus-route {
+    font-family: "Baloo Bhai 2", sans-serif;
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bus-type {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.label-heading {
+    font-size: 12px;
+    color: #000000;
+}
+
+/* .column{
+border-left: 1px solid #e8e8e8;
+padding-left: 22px;
+} */
+
+.time {
+    font-size: 15px;
+    color: #001c44;
+}
+
+.duration {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.status-ontime {
+    background-color: #e2fbf0;
+    color: #10b981;
+}
+
+.status-delayed {
+    background-color: #fff1f2;
+    color: #f43f5e;
+}
+
+.fare {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.price {
+    font-size: 20px;
+    color: #001c44;
+}
+
+.route-btn {
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", sans-serif;
+    background-color: transparent;
+    border: 1px solid #ffbc00;
+    color: #ffae00;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.route-btn:hover {
+    background-color: #ffbc00;
+    color: #000000;
+}
+
+/* NOTE  */
+.note-box {
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #78350f;
+}
+
+.note-icon {
+    font-size: 24px;
+    color: #d97706;
+}
+
+.note-box p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px 0 0 0;
+    font-size: 13px;
+}
+
+/* FOOTER  */
+.main-footer {
+    background-color: #001c44;
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+.footerr {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.footer-logo span {
+    color: rgb(255, 174, 0);
+
+    font-family: "Baloo Bhai 2", sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.text-yellow {
+    color: rgb(255, 174, 0);
+}
+
+.footer-subtext {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 12px;
+    color: #a0b2c6;
+    letter-spacing: 1px;
+    padding-left: 28px;
+    margin-top: -6px;
+    margin: -6px 0 10px 0;
+}
+
+.footer-desc {
+
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.footer-socials i {
+
+    font-size: 18px;
+    margin-right: 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.footer-socials i:hover {
+    color: #ffbc00;
+}
+
+.main-footer h5 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    color: #ffbc00;
+    font-size: 15px;
+    margin: 0 0 15px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.contact-info-line {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0 0 12px 0;
+}
+
+.contact-info-line i {
+    color: #ffbc00;
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    font-family: "Baloo Bhai 2", sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: #919cac;
+    border-top: 1px solid #002257;
+    margin-top: 20px;
+}
+
+/* responsive  */
+/* ==========================================================================
+   PERFECT PREMIUM RESPONSIVE OVERRIDES (FOR ALL MOBILE & TABLET VIEWS)
+   ========================================================================== */
+
+/* Laptop & Large Tablets Viewport Breakpoint */
+@media (max-width: 1024px) {
+    .nav {
+        margin-left: 5vw;
+    }
+
+    .footerr {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .bus-card {
+        display: block;
+        padding: 15px;
+    }
+
+    .bus-card tbody,
+    .bus-card tr {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .bus-card td {
+        display: block;
+        flex: 1 1 30%;
+        border-right: none;
+        padding: 10px;
+    }
+}
+
+/* Medium Tablets & iPads Viewport Breakpoint */
+@media (max-width: 900px) {
+
+    .search form,
+    .search .row-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .search-btn {
+        grid-column: span 2;
+    }
+}
+
+/* Smart Phones Viewports Breakpoint (Anti-Overlap & Clean Center Grid) */
+@media (max-width: 768px) {
+
+    /* 1. Navbar Mobile Optimization */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .nav {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .user,
+    .login li {
+        position: static;
+        display: inline-block;
+        margin: 5px auto 0 auto;
+    }
+
+    /* 2. Banner Header Text Scaling */
+    .heading {
+        padding: 60px 20px 80px 20px;
+        text-align: center;
+    }
+
+    .head-text h2 {
+        font-size: 30px;
+    }
+
+    .heading-line {
+        margin: 8px auto 0 auto;
+    }
+
+    /* 3. Search Field Grid Conversion */
+    .search {
+        margin-top: -40px;
+        padding: 20px 15px;
+    }
+
+    .search form,
+    .search .row-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-btn {
+        grid-column: span 1;
+    }
+
+    .title-left,
+    .title-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    /* 4. Bus Grid Row Deconstruction */
+    .bus-card {
+        border-left: none;
+        border-top: 4px solid #ffbc00;
+        padding: 20px;
+    }
+
+    .bus-card tbody,
+    .bus-card tr {
+        display: block;
+    }
+
+    .bus-card td {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 15px 0;
+    }
+
+    .bus-card td:last-child {
+        border-bottom: none;
+    }
+
+    .bus-imgg {
+        width: 100%;
+        max-width: 280px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .route-btn {
+        max-width: 240px;
+        margin: 5px auto 0 auto;
+    }
+
+    .note-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 5. STRICT ANTI-OVERLAP MOBILE FOOTER RESET */
+    .main-footer {
+        padding: 40px 15px 15px 15px !important;
+    }
+
+    .footerr {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .footerr .footer-column,
+    .footerr>div {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 auto 35px auto !important;
+        padding: 0 !important;
+        clear: both !important;
+    }
+
+    .footer-socials {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-top: 15px !important;
+    }
+
+    .footer-socials i {
+        margin: 0 !important;
+    }
+
+    .contact-info-line {
+        justify-content: center !important;
+    }
+}

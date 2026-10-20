@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Success</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
+</head>
+
+<body class="login-body">
+
+    <div class="login-wrapper-container">
+
+        <!-- ==========================
+             LEFT BRANDING PANEL
+        =========================== -->
+
+        <div class="login-branding-panel">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-bus text-yellow"></i>
+
+                <strong>
+                    CITY BUS
+                    <span class="text-yellow">JSR</span>
+                </strong>
+
+                <div class="brand-sub">
+                    JAMSHEDPUR
+                </div>
+
+            </div>
+
+
+            <div class="welcome-message">
+
+                <h2>
+                    Account
+                    <span class="text-yellow">Recovery</span>
+                </h2>
+
+                <p>
+                    Follow the quick secure steps to verify your identity
+                    and restore access to your profile.
+                </p>
+
+            </div>
+
+
+            <div class="bus-display">
+
+              <img src="{% static 'images/login.jpg' %}" class="login-bus-img" alt="City Bus JSR">
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================
+             RIGHT SUCCESS PANEL
+        =========================== -->
+
+        <div class="login-form-panel">
+
+            <div class="login-card flow-card">
+
+                <div class="card-header" style="margin-bottom:0;">
+
+                    <div class="success-circle-icon">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <h2>Password Changed!</h2>
+
+                    <div class="title-underline"></div>
+
+                    <p class="subtitle-text" style="margin-bottom:30px;">
+
+                        Your password has been changed successfully.
+
+                    </p>
+
+
+                    <a
+                        href="login.html"
+                        style="text-decoration:none;">
+
+                        <button class="login-submit-btn">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                            &nbsp;
+
+                            Back to Login
+
+                        </button>
+
+                    </a>
+
+                </div>
+
+                <!-- Stepper intentionally omitted -->
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>

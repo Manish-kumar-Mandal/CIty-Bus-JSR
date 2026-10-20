@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bus JSR - Forgot Password</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
+  <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
+</head>
+
+<body class="login-body">
+
+    <div class="login-wrapper-container">
+
+        <!-- ================= LEFT BRANDING PANEL ================= -->
+
+        <div class="login-branding-panel">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-bus text-yellow"></i>
+                <strong>
+                    CITY BUS <span class="text-yellow">JSR</span>
+                </strong>
+
+                <div class="brand-sub">
+                    JAMSHEDPUR
+                </div>
+            </div>
+
+            <div class="welcome-message">
+                <h2>
+                    Account <span class="text-yellow">Recovery</span>
+                </h2>
+
+                <p>
+                    Follow the quick secure steps to verify your identity
+                    and restore access to your profile.
+                </p>
+            </div>
+
+            <div class="bus-display">
+             <img src="{% static 'images/login.jpg' %}" class="login-bus-img" alt="City Bus JSR">
+            </div>
+
+            <div class="login-features">
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-bus"></i>
+                    <p>Safe &amp; Reliable</p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <p>On-Time Service</p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-couch"></i>
+                    <p>Comfortable Seats</p>
+                </div>
+
+                <div class="feature-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>Secure Journey</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= RIGHT FORM PANEL ================= -->
+
+        <div class="login-form-panel">
+
+            <div class="login-card flow-card">
+
+                <div class="card-header">
+
+                    <div class="avatar-circle">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                    </div>
+
+                    <h2>Forgot Password</h2>
+
+                    <div class="title-underline"></div>
+
+                    <p class="subtitle-text">
+                        Enter your registered email address and we will
+                        send you a verification OTP.
+                    </p>
+
+                </div>
+
+
+                <!-- Forgot Password Form -->
+
+                <form method="POST" action="otp.html">
+
+                    <div class="form-item">
+
+                        <label>Email Address</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope field-icon"></i>
+
+                            <input
+                                type="email"
+                                name="email"
+                                class="auth-input"
+                                placeholder="Enter your email address"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="login-submit-btn">
+
+                        Send OTP &nbsp;&nbsp;&rarr;
+
+                    </button>
+
+                </form>
+
+
+                <p class="signup-footer-text">
+
+                    <a href="login.html" class="back-link">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Login
+
+                    </a>
+
+                </p>
+
+
+                <!-- Progress Stepper -->
+
+                <div class="flow-stepper">
+
+                    <div class="step-node node-active">
+                        <span class="node-number">1</span>
+                        Enter Email
+                    </div>
+
+                    <div class="step-node">
+                        <span class="node-number">2</span>
+                        Verify OTP
+                    </div>
+
+                    <div class="step-node">
+                        <span class="node-number">3</span>
+                        Reset Password
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>
